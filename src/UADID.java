@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 
 public class UADID {
+
+    private String MESSAGEID;
+    private String MESSAGENAME;
+    private ArrayList<String> CONTEXT ;
+
     public String getMESSAGEID() {
         return MESSAGEID;
     }
@@ -17,16 +22,21 @@ public class UADID {
         this.MESSAGENAME = MESSAGENAME;
     }
 
-    public ArrayList getCONTEXT() {
+    public ArrayList<String> getCONTEXT() {
         return CONTEXT;
     }
 
-    public void setCONTEXT(ArrayList CONTEXT) {
+    public void setCONTEXT(ArrayList<String> CONTEXT) {
         this.CONTEXT = CONTEXT;
+    }
+
+    public void FindWord(ArrayList<String> list, String Cari ){
+        list.add(Cari);
+
+        for (int index = 0; index < list.size(); index++){
+            list.get(index).indexOf(Cari);
+        }
 
     }
 
-    private String MESSAGEID;
-    private String MESSAGENAME;
-    private ArrayList CONTEXT;
 }
